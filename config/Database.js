@@ -1,10 +1,15 @@
 import { Sequelize } from "sequelize";
 
-const db = new Sequelize('crud_db', 'postgres', 'admin123',{
-    host: 'localhost',
-    dialect: 'postgres',
-    port: 5432,
-    logging: false
+const db = new Sequelize(process.env.DATABASE_URL, {
+      dialect: 'postgres',
+  protocol: 'postgres',
+  ssl: true,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
 });
 
 export default db;
