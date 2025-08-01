@@ -1,3 +1,6 @@
+import dotenv from 'dotenv';
+dotenv.config(); // Biasanya di index.js
+
 import express from "express";
 import cors from "cors";
 import db from "./config/Database.js";
