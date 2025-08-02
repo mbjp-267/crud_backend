@@ -20,10 +20,12 @@ try {
 
 app.use(cors());
 app.use(express.json());
-app.use(UserRoute);
+app.use("/users", UserRoute);
 
+// Gunakan PORT dari Railway
+const PORT = process.env.PORT || 5000;
 app.listen(5000, () => {
-    console.log("Server running at http://localhost:5000");
+    console.log("Server running at http://localhost:${PORT}");
 });
 };
 
