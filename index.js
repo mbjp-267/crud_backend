@@ -18,6 +18,11 @@ try {
     console.error("Database connection error:", error);
 }
 
+const allowedOrigins = [
+  "https://crud-frontend-beige.vercel.app",
+  "https://crud-frontend-l5rk5kkvp-m-bambang-j-ps-projects.vercel.app"
+];
+
 app.use(cors({
     origin: ["https://crud-frontend-beige.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
