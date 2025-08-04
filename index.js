@@ -24,7 +24,7 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-    origin: ["https://crud-frontend-beige.vercel.app"],
+    origin: allowedOrigins,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
