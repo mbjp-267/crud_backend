@@ -33,7 +33,7 @@ app.use("/users", UserRoute);
 
 // Gunakan PORT dari Railway
 const PORT = process.env.PORT || 5000;
-app.listen(5000, () => {
+app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 };
