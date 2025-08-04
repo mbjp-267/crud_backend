@@ -20,7 +20,8 @@ try {
 
 const allowedOrigins = [
   "https://crud-frontend-beige.vercel.app",
-  "https://crud-frontend-l5rk5kkvp-m-bambang-j-ps-projects.vercel.app"
+  "https://crud-frontend-l5rk5kkvp-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-p6e6w22k0-m-bambang-j-ps-projects.vercel.app"
 ];
 
 app.use(cors({
