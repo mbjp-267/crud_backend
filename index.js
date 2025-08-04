@@ -9,9 +9,7 @@ dotenv.config(); // Biasanya di index.js
 const app = express();
 
 const allowedOrigins = [
-  "https://crud-frontend-beige.vercel.app",
-  "https://crud-frontend-l5rk5kkvp-m-bambang-j-ps-projects.vercel.app",
-  "https://crud-frontend-p6e6w22k0-m-bambang-j-ps-projects.vercel.app"
+  "https://crud-frontend-beige.vercel.app"
 ];
 
 app.use(cors({
@@ -25,8 +23,8 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     credentials: true
 }));
-app.options("*", cors());
-    
+
+app.options("*", cors()); 
 app.use(express.json());
 app.use("/users", UserRoute);
 
