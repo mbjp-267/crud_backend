@@ -9,11 +9,13 @@ dotenv.config(); // Biasanya di index.js
 const app = express();
 
 const allowedOrigins = [
-  "https://crud-frontend-beige.vercel.app"
+  "https://crud-frontend-beige.vercel.app",
+  "https://crud-frontend-pojbdtbvf-m-bambang-j-ps-projects.vercel.app"
 ];
 
 app.use(cors({
     origin: function(origin, callback) {
+      console.log("CORS request from:", origin);
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         } else {
