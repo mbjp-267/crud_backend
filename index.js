@@ -10,7 +10,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://crud-frontend-beige.vercel.app",
-  "https://crud-frontend-pojbdtbvf-m-bambang-j-ps-projects.vercel.app"
+  "https://crud-frontend-ohz37kqjq-m-bambang-j-ps-projects.vercel.app"
 ];
 
 app.use(cors({
