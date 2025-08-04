@@ -10,6 +10,11 @@ const app = express();
 
 const allowedOrigins = [
   "https://crud-frontend-beige.vercel.app",
+  "https://crud-frontend-l5rk5kkvp-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-p6e6w22k0-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-pt2a7okiw-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-pojbdtbvf-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-ovb70uhfi-m-bambang-j-ps-projects.vercel.app",
   "https://crud-frontend-ohz37kqjq-m-bambang-j-ps-projects.vercel.app"
 ];
 
@@ -23,12 +28,24 @@ app.use(cors({
         }
     },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
-    credentials: true
+    credentials: true,
 }));
 
 app.options("*", cors()); 
 app.use(express.json());
 app.use("/users", UserRoute);
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
+// Middleware error CORS
+app.use((err, req, res, next) => {
+  if (err.message === "Not allowed by CORS") {
+    console.warn("❌ Blocked CORS request from:", req.headers.origin);
+    return res.status(403).json({ message: "Blocked by CORS policy" });
+  }
+  next(err);
+});
 
 const startServer = async () => {
 try {
