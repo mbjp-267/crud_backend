@@ -15,7 +15,8 @@ const allowedOrigins = [
   "https://crud-frontend-pt2a7okiw-m-bambang-j-ps-projects.vercel.app",
   "https://crud-frontend-pojbdtbvf-m-bambang-j-ps-projects.vercel.app",
   "https://crud-frontend-ovb70uhfi-m-bambang-j-ps-projects.vercel.app",
-  "https://crud-frontend-ohz37kqjq-m-bambang-j-ps-projects.vercel.app"
+  "https://crud-frontend-ohz37kqjq-m-bambang-j-ps-projects.vercel.app",
+  "https://crud-frontend-ikry3afqr-m-bambang-j-ps-projects.vercel.app"
 ];
 
 app.use(cors({
