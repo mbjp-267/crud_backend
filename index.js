@@ -10,6 +10,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://crud-frontend.vercel.app",
+  "https://crud-frontend-beige.vercel.app/
   /\.vercel\.app$/
 ];
 
@@ -17,7 +18,7 @@ app.use(cors({
     origin: function(origin, callback) {
       console.log("CORS request from:", origin);
         if (!origin || allowedOrigins.some(o =>
-        typeof o === "string" ? o === origin : o.test(origin))) {
+        typeof o === "string" ? o === origin : o.test(origin)) {
             callback(null, true);
         } else {
             callback(new Error("Not allowed by CORS"));
