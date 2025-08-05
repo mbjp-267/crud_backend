@@ -10,7 +10,7 @@ const app = express();
 
 const allowedOrigins = [
   "https://crud-frontend.vercel.app",
-  "https://crud-frontend-beige.vercel.app/
+  "https://crud-frontend-beige.vercel.app/",
   /\.vercel\.app$/
 ];
 
